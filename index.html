@@ -43,7 +43,7 @@
                             d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5"
                         />
                     </svg>
-                    <h1 class="text-2xl font-extrabold text-white">Archive</h1>
+                    <h1 class="text-2xl font-extrabold text-white hidden md:block">Archive</h1>
                 </a>
             </button>
             </div>
@@ -59,7 +59,8 @@
             
             <div class="flex flex-col gap-6">
                 <h1 class="text-3xl px-2 text-white font-extrabold">My Games</h1>
-                <div class="flex h-fit gap-4">
+                <div class="flex flex-col md:flex-row h-fit gap-4">
+
                     <div class="flex gap-4 ">
                         <a href="https://edroz.itch.io/save-the-world" target="_blank" class="flex flex-col bg-brand2/30 hover:bg-brand2 rounded-xl px-4 pt-2 border-4 border-brand2/50 shadow-md rotate-0 hover:rotate-2 transition-all duration-500 cursor-pointer">
                             <h2 class="text-2xl font-bold text-white mb-2 my-3">Save The World</h2>
@@ -111,30 +112,28 @@
             <div class="flex flex-col gap-6 mt-1">
                 <h1 class="text-3xl px-2 text-white font-extrabold">My Projects</h1>
 
-                <div class="flex flex-col gap-4">
-                    <div class="flex gap-4">
-                        <a href="https://github.com/EdroCode/HeroLab" target="_blank" class="flex flex-col bg-brand2/30 hover:bg-brand2 rounded-xl w-1/2 p-4 border-4 border-brand2/50 shadow-md transition-all duration-200 cursor-pointer">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+
+                        <a href="https://github.com/EdroCode/HeroLab" target="_blank" class="flex flex-col bg-brand2/30 hover:bg-brand2 rounded-xl p-4 border-4 border-brand2/50 shadow-md transition-all duration-200 cursor-pointer">
                             <h2 class="text-2xl font-bold text-white mb-2 my-3">HeroLab</h2>
                             <p class="text-gray-200 text-l font-medium py-2 px-1">
                                 🧪 Versatile character inventory manager and creator. It allows users to easily manage items, customize characters (including names, levels, and attributes), and engage in battles against enemies.
                             </p>
                         </a>
-                        <a href="https://github.com/EdroCode/StellarForge" target="_blank" class="flex flex-col bg-brand2/30 hover:bg-brand2 rounded-xl w-1/2 p-4 border-4 border-brand2/50 shadow-md transition-all duration-200 cursor-pointer">
+                        <a href="https://github.com/EdroCode/StellarForge" target="_blank" class="flex flex-col bg-brand2/30 hover:bg-brand2 rounded-xl p-4 border-4 border-brand2/50 shadow-md transition-all duration-200 cursor-pointer">
                             <h2 class="text-2xl font-bold text-white mb-2 my-3">StellarForge</h2>
                             <p class="text-gray-200 text-l font-medium py-2 px-1 max-w-md">
                                 ✨ Craft you own constellations, which serve as dynamic skill trees. 
                             </p>
                         </a>
-                    </div>
 
-                    <div class="flex gap-4 mb-7">
-                        <a href="https://github.com/EdroCode/SaveTheWorld" target="_blank" class="flex flex-col bg-brand2/30 hover:bg-brand2 rounded-xl w-1/2 p-4 border-4 border-brand2/50 shadow-md transition-all duration-200 cursor-pointer">
+
+                        <a href="https://github.com/EdroCode/SaveTheWorld" target="_blank" class="flex flex-col bg-brand2/30 hover:bg-brand2 rounded-xl p-4 border-4 border-brand2/50 shadow-md transition-all duration-200 cursor-pointer">
                             <h2 class="text-2xl font-bold text-white mb-2 my-3">Save The World</h2>
                             <p class="text-gray-200 text-l font-medium py-2 px-1">
                                 🌍 Save The World is a narrative-driven action platformer where you play as a cat scientist racing to stop an asteroid from destroying Earth. Uncover a truth that may change everything. 
                             </p>
-                        </a>
-                        <a class="w-1/2">
                         </a>
 
                     </div>
@@ -150,7 +149,7 @@
 
         <div class="flex h-16 w-full p-4 bg-brand2 justify-between items-center gap-2">
 
-            <p class="text-white font-semibold">© 2026 EdroCode</p>
+            <p class="text-white font-semibold hidden md:block">© 2026 EdroCode</p>
             <div class="flex gap-4">
                 <a href="https://github.com/EdroCode" target="_blank" class="flex gap-2 cursor-pointer items-center">
 
