@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link href="./output.css" rel="stylesheet" />
+        <link rel="icon" type="image/edro-icon" href="/Assets/LogoIcon.png" />
+
+        <title>EdroCode | Tutorial Archive</title>
+    </head>
+
+
+    
+    <body class="flex flex-col min-h-screen bg-brand">
+        
+        <div class="flex h-20 w-fill p-2 bg-brand2 justify-between items-center gap-2">
+            
+            <div class="flex items-center justify-between gap-2 pl-2">
+            <a href="index.html" class="flex  items-center gap-2 cursor-pointer">
+                <img
+                src="/Assets/LogoIcon.png"
+                alt="Edro logo"
+                class="w-16 h-16"
+                />
+                <h1 class="text-4xl font-extrabold text-white">EDRO</h1>
+            </a>
+            </div>
+
+            <div class="flex items-center gap-2 pr-4">
+            <button class="flex gap-2 cursor-pointer">
+                
+                <a href="archive.html" class="flex cursor-pointer gap-2 items-center">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="white"
+                        class="size-8"
+                        >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5"
+                        />
+                    </svg>
+                    <h1 class="text-2xl font-extrabold text-white">Archive</h1>
+                </a>
+            </button>
+            </div>
+        </div>
+
+        <div class="flex flex-1 flex-col w-full p-8 py-12 bg-brand justify-start gap-6 overflow-x-auto scrollbar-thin scrollbar-thumb-brand2/50 scrollbar-track-brand/20" >
+        
+
+            <h1 class="text-3xl px-2 text-white font-extrabold">Youtube Tutorials Code Archive </h1>
+            <div class="flex gap-6">
+                <div class="flex h-fit gap-4">
+                    <div class="flex gap-4 ">
+                        <div class="flex flex-col bg-brand2/30 rounded-xl p-4 border-4 border-brand2/50 shadow-md">
+                            <a class="text-2xl font-bold text-purple-400 mt-1 mb-5 cursor-pointer">2D Simple Ranged Attack</a>
+                            <div class="flex flex-col gap-4">
+
+                                <div class="flex flex-col bg-brand2/30 rounded-xl px-4 border-4 border-brand2/50 shadow-md cursor-text">
+                                    <pre>
+                                        <code class="flex text-white justify-start ">
+extends CharacterBody2D
+ 
+@onready var knife = preload("res://Scenes/knife.tscn")
+ 
+@export var SPEED : int = 150
+@export var JUMP_FORCE : int = 255
+@export var GRAVITY : int = 900
+ 
+var is_attacking = false
+var can_trow = true
+ 
+func _physics_process(delta):
+	
+	
+	var direction = Input.get_axis("Left","Right")
+	
+	if direction:
+		
+		velocity.x = SPEED * direction
+		
+		if is_on_floor() and is_attacking == false:
+			
+			$Flip/AnimatedSprite2D.play("Run")
+		
+	else:
+		
+		velocity.x = 0
+		
+		if is_on_floor() and is_attacking == false:
+			
+			$Flip/AnimatedSprite2D.play("Idle")
+	
+	# Rotate
+	
+	if direction == 1:
+		$Flip.scale.x = 1
+	elif direction == -1:
+		$Flip.scale.x = -1
+	
+	# Gravity
+	
+	if not is_on_floor():
+		
+		velocity.y += GRAVITY * delta
+		
+		if velocity.y > 0:
+			
+			$Flip/AnimatedSprite2D.play("Fall")
+	
+	# Jump
+	
+	if is_on_floor():
+		
+		if Input.is_action_just_pressed("Jump"):
+			
+			velocity.y -= JUMP_FORCE
+			
+			$Flip/AnimatedSprite2D.play("Jump")
+	
+	
+	
+	# Trow
+	
+	if Input.is_action_just_pressed("Trow"):
+		
+		if can_trow:
+			
+			can_trow = false
+			
+			$Flip/AnimatedSprite2D.play("Trow") 
+			is_attacking = true
+			
+			
+			var k = knife.instantiate()
+			k.vel = $Flip.scale.x
+			k.global_position = $Flip/TrowPos.global_position
+			get_parent().add_child(k)
+		
+	
+	if is_attacking:
+		
+		velocity = Vector2.ZERO
+		await $Flip/AnimatedSprite2D.animation_finished
+		is_attacking = false
+		can_trow = true
+	
+	
+	move_and_slide() 
+                                        </code>
+                                    </pre>
+    
+                                </div>
+                                <div class="flex flex-col bg-brand2/30 rounded-xl px-4 border-4 border-brand2/50 shadow-md cursor-text">
+                                    <pre>
+                                        <code class="flex text-white justify-start "> 
+extends CharacterBody2D
+ 
+var SPEED : int = 300
+var vel : float
+
+func _physics_process(delta):
+	
+  move_local_x(vel * SPEED * delta)
+                                        </code>
+                                    </pre>
+    
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex h-fit gap-4">
+                    <div class="flex gap-4 ">
+                        <div class="flex flex-col bg-brand2/30 rounded-xl p-4 border-4 border-brand2/50 shadow-md">
+                            <a href="https://www.youtube.com/watch?v=mHYU_gJ1U6g" target="_blank" class="text-2xl cursor-pointer font-bold text-purple-400 mt-1 mb-5">2D Simple Platformer Movement</a>
+                            <div class="flex flex-col bg-brand2/30 rounded-xl px-4 border-4 border-brand2/50 shadow-md cursor-text">
+                                <pre>
+                                    <code class="flex text-white justify-start items-start px-2">
+extends CharacterBody2D
+
+@export var SPEED : int = 150 
+@export var JUMP_FORCE: int = 255 
+@export var GRAVITY: int = 900
+
+@onready var anim = $Rotate/AnimatedSprite2D
+
+func _physics_process(delta):
+
+var direction = Input.get_axis("Left", "Right")
+if direction:
+velocity.x = direction * SPEED
+if is_on_floor():
+    anim.play("Run")
+else:
+
+velocity.x = 0
+
+if is_on_floor():
+    anim.play("Idle")
+
+# Rotate
+
+if direction == 1:
+anim.flip_h = false
+elif direction == -1:
+anim.flip_h = true
+
+# Gravity
+
+if not is_on_floor():
+
+velocity.y += GRAVITY * delta
+
+# Jump
+
+if Input.is_action_just_pressed("Jump") and is_on_floor():
+
+velocity.y -= JUMP_FORCE
+
+anim.play("Jump")
+
+move_and_slide()
+                                    </code>
+                                </pre>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                   
+            </div>
+
+
+        
+        </div>
+
+        <div class="flex h-16 w-full p-4 bg-brand2 justify-between items-center gap-2">
+
+            <p class="text-white font-semibold">© 2026 EdroCode</p>
+            <div class="flex gap-4">
+                <a href="https://github.com/EdroCode" target="_blank" class="flex gap-2 cursor-pointer items-center">
+
+                    <svg
+                        height="32"
+                        width="32"
+                        viewBox="0 0 16 16"
+                        version="1.1"
+                        aria-hidden="true"
+                        fill="white"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                    <path
+                        fill-rule="evenodd"
+                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38
+                        0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13
+                        -.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28
+                        -.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12
+                        0 0 .67-.21 2.2.82a7.65 7.65 0 012-.27c.68.003 1.36.092 2 .27 1.53-1.04 2.2-.82 2.2-.82
+                        .44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48
+                        0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+                    ></path>
+                    </svg>
+                    <p class="text-white font-semibold">GitHub</p>
+
+                </a>
+                <a href="https://www.youtube.com/@EdroZz" target="_blank" class="flex gap-2 cursor-pointer items-center">
+                    <svg
+                        height="32"
+                        width="32"
+                        viewBox="0 0 576 512"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="white"
+                    >
+                    <path d="M549.655 124.083c-6.281-23.712-24.816-42.248-48.529-48.529C456.635 64 288 64 288 64s-168.635 0-213.127 11.554c-23.712 6.281-42.248 24.816-48.529 48.529C16 168.576 16 256 16 256s0 87.424 10.344 131.917c6.281 23.712 24.816 42.248 48.529 48.529C119.365 448 288 448 288 448s168.635 0 213.127-11.554c23.712-6.281 42.248-24.816 48.529-48.529C560 343.424 560 256 560 256s0-87.424-10.345-131.917zM232 334V178l142 78-142 78z"/>
+                    </svg>
+                    <p class="text-white font-semibold">Youtube</p>
+
+                </a>
+
+                <a href="https://edroz.itch.io/" target="_blank" class="flex items-center gap-3 py-2  cursor-pointer">
+                    <img src="/Assets/LogoItch.svg" class="h-7 w-7">
+                    <p class="text-white font-semibold text-lg">Itch.io</p>
+                </a>
+
+
+            </div>
+            
+        </div>
+    </body>
+</html>
