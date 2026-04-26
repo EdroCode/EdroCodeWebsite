@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400..800&family=Zen+Dots&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-syne: "Syne", sans-serif;
+  --font-zen-dots: "Zen Dots", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-cesium: #ee7749;
+  --color-alien: #c8f135;
+  --color-bugs: #7fbf1f;
+  --color-dojo: #7b2cbf;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-mono);
+  }
+}
+
+.accent-dot {
+  width: 12px;
+  height: 12px;
+  background: alien;
+  border-radius: 50%;
+  display: inline-block;
+  animation: pulse 2s infinite;
+}
