@@ -49,34 +49,33 @@ export default function LinksModal({
                 href="https://github.com/EdroCode"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-between border border-gray-200 rounded-sm px-4 py-3 text-sm font-mono text-zinc-700 hover:border-gray-500 hover:text-black transition"
+                className="flex gap-2 items-center border border-gray-200 rounded-sm px-4 py-3 text-sm font-mono text-zinc-700 hover:border-gray-500 hover:text-black transition"
               >
-                <Image
-                  src="../github.svg"
-                  alt="GitHub"
-                  width={20}
-                  height={20}
-                />
+                <Image src="/github.svg" alt="GitHub" width={20} height={20} />
                 <span>GitHub</span>
-                <span>→</span>
               </a>
               <a
                 href="https://edroz.itch.io/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-between border border-gray-200 rounded-sm px-4 py-3 text-sm font-mono text-zinc-700 hover:border-gray-500 hover:text-black transition"
+                className="flex gap-2 items-center border border-gray-200 rounded-sm px-4 py-3 text-sm font-mono text-zinc-700 hover:border-gray-500 hover:text-black transition"
               >
+                <Image src="/itch.svg" alt="ItchIo" width={20} height={20} />
                 <span>itch.io</span>
-                <span>→</span>
               </a>
               <a
                 href="https://www.linkedin.com/in/pedro-coutinh0/?locale=pt"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-between border border-gray-200 rounded-sm px-4 py-3 text-sm font-mono text-zinc-700 hover:border-gray-500 hover:text-black transition"
+                className="flex gap-2 items-center border border-gray-200 rounded-sm px-4 py-3 text-sm font-mono text-zinc-700 hover:border-gray-500 hover:text-black transition"
               >
+                <Image
+                  src="/linkedin.png"
+                  alt="Linkedin"
+                  width={20}
+                  height={20}
+                />
                 <span>LinkedIn</span>
-                <span>→</span>
               </a>
             </div>
           </div>

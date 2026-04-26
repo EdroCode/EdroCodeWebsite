@@ -1,14 +1,16 @@
 // components/Navbar.jsx
 import Link from "next/link";
 import LinksModal from "./LinksModal";
+import Image from "next/image";
 
 export default function Navbar() {
   return (
     <nav className="flex items-center justify-between px-8 py-4 border-b border-gray-800">
       <LinksModal
         label="~/edro"
-        className="hover:text-zinc-900 hover:font-semibold text-lg text-zinc-600 transition "
+        className="hover:text-zinc-900 hover:font-semibold text-md text-zinc-800 transition "
       />
+
       <ul className="flex gap-8">
         {[
           { href: "/home", label: "Home" },

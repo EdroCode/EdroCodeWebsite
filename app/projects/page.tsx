@@ -1,4 +1,7 @@
 // app/projects/page.tsx
+import type { Metadata } from "next";
+export const metadata: Metadata = { title: "Projects" };
+
 const webProjects = [
   {
     title: "Healthium",
@@ -126,7 +129,7 @@ export default function Projects() {
             Projects
           </h1>
         </div>
-        <p className="text-sm text-zinc-500 font-mono">Work worth showing.</p>
+        <p className="text-lg text-zinc-500 font-mono">Work worth showing.</p>
       </div>
 
       <hr className="border-gray-300 mb-10" />

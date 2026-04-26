@@ -1,6 +1,9 @@
 // app/archive/page.tsx
 import SnippetCard from "@/components/SnippetCard";
 
+import type { Metadata } from "next";
+export const metadata: Metadata = { title: "Code Archive" };
+
 const rangedAttackCode = `extends CharacterBody2D
 
 @onready var knife = preload("res://Scenes/knife.tscn")
@@ -108,7 +111,7 @@ export default function Archive() {
           |
         </h1>
         <h1 className="text-6xl font-zen-dots tracking-tight text-gray-900 mb-4">
-          Code Library
+          Code Archive
         </h1>
       </div>
       <p className="text-lg text-gray-500 leading-relaxed mb-12">

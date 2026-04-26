@@ -1,4 +1,6 @@
 // app/about/page.tsx
+import type { Metadata } from "next";
+export const metadata: Metadata = { title: "About" };
 import LinksModal from "@/components/LinksModal";
 
 export default function About() {
@@ -13,7 +15,7 @@ export default function About() {
             About
           </h1>
         </div>
-        <p className="text-sm text-zinc-500 font-mono">
+        <p className="text-lg text-zinc-500 font-mono">
           How I work and what I focus on
         </p>
       </div>
