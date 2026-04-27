@@ -3,7 +3,6 @@ import Navcard from "@/components/Navcard";
 import ProjectLink from "@/components/ProjectLink";
 import LinksModal from "@/components/LinksModal";
 
-// inside your JSX:
 export default function Home() {
   return (
     <div className="max-w-7xl mx-auto px-4 md:px-2 py-20">
@@ -83,6 +82,13 @@ export default function Home() {
       <div>
         <p className="text-sm text-gray-400 font-mono mb-6">$ recently_added</p>
         <ul className="space-y-5">
+          <ProjectLink
+            href="https://github.com/EdroCode/EdroCodeWebsite"
+            title="Personal Website"
+            award=""
+            tags={["NextJS", "TypeScript"]}
+            description="Simple personal website to share my projects and host content for my youtube."
+          />
           <ProjectLink
             href="https://github.com/TomasLFerreira/healthium"
             title="Healthium"
