@@ -32,7 +32,8 @@ export const metadata: Metadata = {
     default: "Edro",
     template: "Edro | %s",
   },
-  description: "Pedro Coutinho's personal site",
+  description:
+    "Pedro Coutinho's portfolio - projects, skills, and work in web development.",
 };
 
 export default function RootLayout({
