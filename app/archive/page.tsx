@@ -105,7 +105,7 @@ func _physics_process(delta):
 
 export default function Archive() {
   return (
-    <div className="max-w-7xl mx-auto px-2 py-20">
+    <div className="max-w-7xl mx-auto px-4 md:px-2 py-20">
       <div className="flex">
         <h1 className="text-6xl font-zen-dots tracking-tight text-dojo mb-4">
           |

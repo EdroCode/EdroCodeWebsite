@@ -71,7 +71,7 @@ function VideoCard({
 
 export default function Tutorials() {
   return (
-    <div className="max-w-7xl mx-auto px-2 py-20">
+    <div className="max-w-7xl mx-auto px-4 md:px-2 py-20">
       <div className="mb-12">
         <div className="flex">
           <h1 className="font-zen-dots text-6xl tracking-tight text-godot mb-4">
