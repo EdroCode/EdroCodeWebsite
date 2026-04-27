@@ -119,7 +119,7 @@ function ProjectCard({ title, award, tags, description, href }: Project) {
 
 export default function Projects() {
   return (
-    <div className="max-w-7xl mx-auto px-2 py-20">
+    <div className="max-w-7xl mx-auto px-4 md:px-2 py-20">
       <div className="mb-8">
         <div className="flex">
           <h1 className="text-6xl font-zen-dots tracking-tight text-cesium mb-4">

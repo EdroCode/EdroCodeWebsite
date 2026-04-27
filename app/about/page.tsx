@@ -5,7 +5,7 @@ import LinksModal from "@/components/LinksModal";
 
 export default function About() {
   return (
-    <div className="max-w-7xl mx-auto px-2 py-20">
+    <div className="max-w-7xl mx-auto px-4 md:px-2 py-20">
       <div className="flex flex-col mb-12 gap-3">
         <div className="flex">
           <h1 className="text-6xl font-zen-dots tracking-tight text-alien mb-4">

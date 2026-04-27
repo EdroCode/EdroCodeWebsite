@@ -6,9 +6,9 @@ import LinksModal from "@/components/LinksModal";
 // inside your JSX:
 export default function Home() {
   return (
-    <div className="max-w-7xl mx-auto px-2 py-20">
+    <div className="max-w-7xl mx-auto px-4 md:px-2 py-20">
       <div className="flex items-center mb-4 gap-4">
-        <div className="inline-flex items-center gap-3 border border-gray-200 bg-gray-200 rounded-sm px-3 py-1.5 text-sm text-zinc-800 font-mono">
+        <div className="hidden md:inline-flex items-center gap-3 border border-gray-200 bg-gray-200 rounded-sm px-3 py-1.5 text-sm text-zinc-800 font-mono">
           <span>&gt;_</span>
           <span>Last updated Apr 2026</span>
         </div>
