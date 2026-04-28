@@ -1,9 +1,10 @@
-// components/LinksModal.tsx
 "use client";
-import Image from "next/image";
 
+import Image from "next/image";
+import { Mail } from "lucide-react";
 import { twMerge } from "tailwind-merge";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
 type LinksModalProps = {
   border?: boolean;
@@ -17,6 +18,12 @@ export default function LinksModal({
   className = "",
 }: LinksModalProps) {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+
+  // Close modal when navigating between pages
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
 
   return (
     <>
@@ -44,6 +51,7 @@ export default function LinksModal({
             <p className="text-sm text-gray-400 font-mono mb-6">
               $ where_to_find_me
             </p>
+
             <div className="flex flex-col gap-3">
               <a
                 href="https://github.com/EdroCode"
@@ -54,15 +62,17 @@ export default function LinksModal({
                 <Image src="/github.svg" alt="GitHub" width={20} height={20} />
                 <span>GitHub</span>
               </a>
+
               <a
                 href="https://edroz.itch.io/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex gap-2 items-center border border-gray-200 rounded-sm px-4 py-3 text-sm font-mono text-zinc-700 hover:border-gray-500 hover:text-black transition"
               >
-                <Image src="/itch.svg" alt="ItchIo" width={20} height={20} />
+                <Image src="/itch.svg" alt="Itch.io" width={20} height={20} />
                 <span>itch.io</span>
               </a>
+
               <a
                 href="https://www.linkedin.com/in/pedro-coutinh0/?locale=pt"
                 target="_blank"
@@ -71,11 +81,19 @@ export default function LinksModal({
               >
                 <Image
                   src="/linkedin.png"
-                  alt="Linkedin"
+                  alt="LinkedIn"
                   width={20}
                   height={20}
                 />
                 <span>LinkedIn</span>
+              </a>
+
+              <a
+                href="mailto:edr0c0de@protonmail.com"
+                className="flex gap-2 items-center border border-gray-200 rounded-sm px-4 py-3 text-sm font-mono text-zinc-700 hover:border-gray-500 hover:text-black transition"
+              >
+                <Mail width={20} height={20} />
+                <span>edr0c0de@protonmail.com</span>
               </a>
             </div>
           </div>
