@@ -58,23 +58,29 @@ export default function Home() {
 
       <div className="mb-10">
         <p className="text-sm text-gray-400 font-mono mb-2">$ current_focus</p>
-        <p className="text-gray-800 leading-relaxed">
-          Building <span className="font-semibold text-bugs">RollKeeper</span> -
-          a single-tab dashboard for TTRPG Dungeon Masters.
-        </p>
-        <p className="text-gray-800 leading-relaxed">
-          Contributing to{" "}
-          <span className="font-semibold text-cesium">Yearbook</span> - an
-          online yearbook platform built at{" "}
-          <a
-            href="https://cesium.di.uminho.pt/en"
-            target="_blank"
-            className="font-semibold text-ceium"
-          >
-            @CeSIUM
-          </a>
-          .
-        </p>
+        <div className="flex flex-col gap-2">
+          <p className="text-gray-800 leading-relaxed">
+            Building <span className="font-semibold text-dojo">moodiUM</span> -
+            a mood tracker for tracking habits, time, mood, and goals.
+          </p>
+          <p className="text-gray-800 leading-relaxed">
+            Building <span className="font-semibold text-bugs">RollKeeper</span> -
+            a single-tab dashboard for TTRPG Dungeon Masters.
+          </p>
+          <p className="text-gray-800 leading-relaxed">
+            Contributing to{" "}
+            <span className="font-semibold text-cesium">Yearbook</span> - an
+            online yearbook platform built at{" "}
+            <a
+              href="https://cesium.di.uminho.pt/en"
+              target="_blank"
+              className="font-semibold text-ceium"
+            >
+              @CeSIUM
+            </a>
+            .
+          </p>
+        </div>
       </div>
 
       <hr className="border-gray-300 mb-10" />
