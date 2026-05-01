@@ -12,8 +12,17 @@ const webProjects = [
     href: "https://github.com/EdroCode",
   },
   {
+    title: "Moodium",
+    tags: ["Next.js", "Typescript"],
+    status: "In active development",
+    description:
+      "An web app that alows users to track habits, time, mood, goals and see insights of their life. ",
+    href: "https://github.com/EdroCode/rollkeeper",
+  },
+  {
     title: "RollKeeper",
     tags: ["Elixir", "Phoenix LiveView"],
+    status: "In active development",
     description:
       "A single-tab dashboard for TTRPG Dungeon Masters. Tracks initiative, HP, conditions, and notes in real time - no more juggling five browser tabs mid-session.",
     href: "https://github.com/EdroCode/rollkeeper",
@@ -74,12 +83,13 @@ const gameProjects = [
 type Project = {
   title: string;
   award?: string;
+  status?: string;
   tags: string[];
   description: string;
   href: string;
 };
 
-function ProjectCard({ title, award, tags, description, href }: Project) {
+function ProjectCard({ title, award, status, tags, description, href }: Project) {
   return (
     <a
       href={href}
@@ -94,6 +104,9 @@ function ProjectCard({ title, award, tags, description, href }: Project) {
           </h2>
           {award && (
             <span className="text-sm font-semibold text-bugs">{award}</span>
+          )}
+          {status && (
+            <span className="text-sm font-semibold text-dojo">{status}</span>
           )}
         </div>
         <span className="text-gray-400 group-hover:text-gray-800 group-hover:translate-x-0.5 transition-transform shrink-0">
