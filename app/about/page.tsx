@@ -2,18 +2,35 @@
 import type { Metadata } from "next";
 export const metadata: Metadata = { title: "About" };
 import LinksModal from "@/components/LinksModal";
+import { Download, ExternalLink } from "lucide-react";
 
 export default function About() {
   return (
     <div className="max-w-7xl mx-auto px-4 md:px-2 py-20">
       <div className="flex flex-col mb-12 gap-3">
-        <div className="flex">
-          <h1 className="text-6xl font-zen-dots tracking-tight text-alien mb-4">
-            |
-          </h1>
-          <h1 className="text-6xl font-zen-dots tracking-tight text-gray-900 mb-4">
-            About
-          </h1>
+        <div className="flex justify-between">
+          <div className="flex">
+            <h1 className="text-6xl font-zen-dots tracking-tight text-alien mb-4">
+              |
+            </h1>
+            <h1 className="text-6xl font-zen-dots tracking-tight text-gray-900 mb-4">
+              About
+            </h1>
+          </div>
+          <div className="flex gap-4">
+            <a className="flex p-2  rounded-lg gap-3 h-fit hover:underline" href="/cv.pdf" target="_blank" rel="noopener noreferrer">
+              <p className="text-lg font-mono tracking-tight text-gray-900 mb-4" >
+                View CV
+              </p>
+              <ExternalLink className="w-6"/>
+            </a>
+            <a className="flex p-2  rounded-lg gap-3 h-fit hover:underline" href="/cv.pdf" download="cv.pdf">
+              <p className="text-lg font-mono tracking-tight text-gray-900 mb-4" >
+                Download CV
+              </p>
+              <Download className="w-6"/>
+            </a>
+          </div>
         </div>
         <p className="text-lg text-zinc-500 font-mono">
           How I work and what I focus on
