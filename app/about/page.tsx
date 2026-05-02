@@ -2,7 +2,7 @@
 import type { Metadata } from "next";
 export const metadata: Metadata = { title: "About" };
 import LinksModal from "@/components/LinksModal";
-import { ArrowUpRight } from "lucide-react";
+import { Download, ExternalLink } from "lucide-react";
 
 export default function About() {
   return (
@@ -17,12 +17,20 @@ export default function About() {
               About
             </h1>
           </div>
-          <a className="flex p-2  rounded-lg gap-3 h-fit hover:underline" href="/cv.pdf" download="cv.pdf">
-            <p className="text-xl font-mono tracking-tight text-gray-900 mb-4" >
-              Download CV
-            </p>
-            <ArrowUpRight />
-          </a>
+          <div className="flex gap-4">
+            <a className="flex p-2  rounded-lg gap-3 h-fit hover:underline" href="/cv.pdf" target="_blank" rel="noopener noreferrer">
+              <p className="text-lg font-mono tracking-tight text-gray-900 mb-4" >
+                View CV
+              </p>
+              <ExternalLink className="w-6"/>
+            </a>
+            <a className="flex p-2  rounded-lg gap-3 h-fit hover:underline" href="/cv.pdf" download="cv.pdf">
+              <p className="text-lg font-mono tracking-tight text-gray-900 mb-4" >
+                Download CV
+              </p>
+              <Download className="w-6"/>
+            </a>
+          </div>
         </div>
         <p className="text-lg text-zinc-500 font-mono">
           How I work and what I focus on
