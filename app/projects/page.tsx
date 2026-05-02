@@ -89,7 +89,14 @@ type Project = {
   href: string;
 };
 
-function ProjectCard({ title, award, status, tags, description, href }: Project) {
+function ProjectCard({
+  title,
+  award,
+  status,
+  tags,
+  description,
+  href,
+}: Project) {
   return (
     <a
       href={href}
