@@ -64,8 +64,8 @@ export default function Home() {
             a mood tracker for tracking habits, time, mood, and goals.
           </p>
           <p className="text-gray-800 leading-relaxed">
-            Building <span className="font-semibold text-bugs">RollKeeper</span> -
-            a single-tab dashboard for TTRPG Dungeon Masters.
+            Building <span className="font-semibold text-bugs">RollKeeper</span>{" "}
+            - a single-tab dashboard for TTRPG Dungeon Masters.
           </p>
           <p className="text-gray-800 leading-relaxed">
             Contributing to{" "}
