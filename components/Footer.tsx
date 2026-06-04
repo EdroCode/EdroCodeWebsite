@@ -11,7 +11,7 @@ export default function Footer() {
           rel="noopener noreferrer"
           className="text-sm text-gray-700 font-mono hover:text-black transition cursor-pointer"
         >
-          $ Built with Next.js
+          Built with Next.js
         </a>
         <div className="flex gap-3">
           <LinksModal />

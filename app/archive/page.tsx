@@ -121,7 +121,7 @@ export default function Archive() {
       <hr className="border-gray-300 mb-10" />
 
       <div>
-        <p className="text-sm text-gray-400 font-mono mb-6">$ snippets</p>
+        <p className="text-sm text-gray-400 font-mono mb-6">snippets</p>
         <ul className="space-y-8">
           <li className="space-y-4">
             <SnippetCard

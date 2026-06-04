@@ -49,7 +49,7 @@ export default function LinksModal({
             onClick={(e) => e.stopPropagation()}
           >
             <p className="text-sm text-gray-400 font-mono mb-6">
-              $ where_to_find_me
+              where_to_find_me
             </p>
 
             <div className="flex flex-col gap-3">
