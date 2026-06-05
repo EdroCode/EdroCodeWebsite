@@ -89,7 +89,7 @@ export default function Tutorials() {
       <hr className="border-gray-300 mb-10" />
 
       <div>
-        <p className="text-sm text-gray-400 font-mono mb-6">$ videos</p>
+        <p className="text-sm text-gray-400 font-mono mb-6">videos</p>
         <ul className="space-y-4">
           {videos.map((v) => (
             <li key={v.id}>

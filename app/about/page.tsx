@@ -48,7 +48,7 @@ export default function About() {
 
       <div className="space-y-12">
         <div>
-          <p className="text-sm text-gray-400 font-mono mb-4">$ whoami</p>
+          <p className="text-sm text-gray-400 font-mono mb-4">whoami</p>
           <div className="space-y-2 text-gray-800 leading-relaxed">
             <p>
               Computer Engineering student at UMinho, based in Braga. I got into
@@ -74,7 +74,7 @@ export default function About() {
         <hr className="border-gray-300" />
 
         <div>
-          <p className="text-sm text-gray-400 font-mono mb-6">$ experience</p>
+          <p className="text-sm text-gray-400 font-mono mb-6">experience</p>
           <div className="space-y-8">
             <div>
               <div className="flex flex-wrap justify-between gap-2 mb-2">
@@ -115,7 +115,7 @@ export default function About() {
         <hr className="border-gray-300" />
 
         <div>
-          <p className="text-sm text-gray-400 font-mono mb-6">$ awards</p>
+          <p className="text-sm text-gray-400 font-mono mb-6">awards</p>
           <div>
             <div className="flex flex-wrap justify-between gap-2 mb-2">
               <p className="text-zinc-950 font-mono text-lg">
@@ -138,7 +138,7 @@ export default function About() {
         <hr className="border-gray-300" />
 
         <div>
-          <p className="text-sm text-gray-400 font-mono mb-6">$ skills</p>
+          <p className="text-sm text-gray-400 font-mono mb-6">skills</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {[
               {

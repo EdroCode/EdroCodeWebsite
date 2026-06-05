@@ -155,7 +155,7 @@ export default function Projects() {
       <hr className="border-gray-300 mb-10" />
 
       <div className="mb-16">
-        <p className="text-sm text-gray-400 font-mono mb-6">$ web_and_tools</p>
+        <p className="text-sm text-gray-400 font-mono mb-6">web_and_tools</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {webProjects.map((p) => (
             <ProjectCard key={p.title} {...p} />
@@ -166,7 +166,7 @@ export default function Projects() {
       <hr className="border-gray-300 mb-10" />
 
       <div className="mb-16">
-        <p className="text-sm text-gray-400 font-mono mb-6">$ games</p>
+        <p className="text-sm text-gray-400 font-mono mb-6">games</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {gameProjects.map((p) => (
             <ProjectCard key={p.title} {...p} />

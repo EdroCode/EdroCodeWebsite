@@ -3,17 +3,32 @@ import Navcard from "@/components/Navcard";
 import ProjectLink from "@/components/ProjectLink";
 import LinksModal from "@/components/LinksModal";
 
+function Knob() {
+  return (
+    <div className="relative w-24 h-24">
+      <div className="absolute inset-0 rounded-full bg-zinc-100 shadow-[inset_0_2px_6px_rgba(0,0,0,0.18),0_8px_16px_rgba(0,0,0,0.12)]"></div>
+
+      <div className="absolute inset-2 rounded-full border border-zinc-200"></div>
+
+      <div className="absolute inset-7 rounded-full bg-zinc-200 shadow-inner"></div>
+    </div>
+  );
+}
+
 export default function Home() {
   return (
-    <div className="max-w-7xl mx-auto px-4 md:px-2 py-20">
+    <div className="max-w-7xl mx-auto px-4 md:px-2 py-15">
       <div className="flex items-center mb-4 gap-4">
         <div className="hidden md:inline-flex items-center gap-3 border border-gray-200 bg-gray-200 rounded-sm px-3 py-1.5 text-sm text-zinc-800 font-mono">
           <span>&gt;_</span>
-          <span>Last updated May 2026</span>
+          <span>Last updated June 2026</span>
         </div>
-        <div className="flex items-center gap-2 border-2 border-gray-200 rounded-sm px-3 py-1.5 text-sm text-zinc-800 font-mono">
-          <span className="w-2 h-2 rounded-full bg-alien shrink-0"></span>
-          <span>Open to internships · Summer 2026</span>
+        <div className="flex items-center gap-2 border border-gray-200 px-3 py-1.5 text-sm text-zinc-800">
+          <span className="w-2 h-2 bg-alien" />
+          <span className="w-2 h-2 bg-dojo" />
+          <span className="w-2 h-2 bg-cesium" />
+          <span className="w-2 h-2 bg-bugs" />
+          <span className="font-normal">Open to internships · Summer 2026</span>
         </div>
       </div>
 
@@ -31,9 +46,8 @@ export default function Home() {
           @EdroCode
         </a>
       </p>
-      <p className="text-lg text-gray-500 w-full leading-relaxed mb-14">
-        Computer Science student at UMinho building tools I actually want to
-        use.
+      <p className="text-lg text-gray-500 w-full leading-relaxed mb-10">
+        Computer Science student at UMinho.
       </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-12">
@@ -57,7 +71,7 @@ export default function Home() {
       <hr className="border-gray-300 mb-10" />
 
       <div className="mb-10">
-        <p className="text-sm text-gray-400 font-mono mb-2">$ current_focus</p>
+        <p className="text-sm text-gray-400 font-mono mb-2">current_focus</p>
         <div className="flex flex-col gap-2">
           <p className="text-gray-800 leading-relaxed">
             Building <span className="font-semibold text-dojo">moodiUM</span> -
@@ -86,7 +100,7 @@ export default function Home() {
       <hr className="border-gray-300 mb-10" />
 
       <div>
-        <p className="text-sm text-gray-400 font-mono mb-6">$ recently_added</p>
+        <p className="text-sm text-gray-400 font-mono mb-6">recently_added</p>
         <ul className="space-y-5">
           <ProjectLink
             href="https://github.com/EdroCode/EdroCodeWebsite"
