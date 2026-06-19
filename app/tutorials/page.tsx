@@ -73,13 +73,15 @@ export default function Tutorials() {
   return (
     <div className="max-w-7xl mx-auto px-4 md:px-2 py-20">
       <div className="mb-12">
-        <div className="flex">
-          <h1 className="font-zen-dots text-6xl tracking-tight text-godot mb-4">
-            |
-          </h1>
-          <h1 className="font-zen-dots text-6xl tracking-tight text-gray-900 mb-4">
-            Tutorials
-          </h1>
+        <div>
+          <div className="flex">
+            <h1 className="font-zen-dots text-6xl tracking-tight text-godot mb-4">
+              |
+            </h1>
+            <h1 className="font-zen-dots text-6xl tracking-tight text-gray-900 mb-4">
+              Tutorials
+            </h1>
+          </div>
         </div>
         <p className="text-lg text-zinc-500 font-mono">
           Step-by-step Godot guides.

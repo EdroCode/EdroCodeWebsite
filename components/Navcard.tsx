@@ -1,7 +1,6 @@
 // components/Navcard.tsx
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
-import LinksModal from "@/components/LinksModal";
 
 type NavcardProps = {
   title: string;

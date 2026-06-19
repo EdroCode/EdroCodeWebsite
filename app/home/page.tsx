@@ -1,19 +1,6 @@
 // app/page.tsx
 import Navcard from "@/components/Navcard";
 import ProjectLink from "@/components/ProjectLink";
-import LinksModal from "@/components/LinksModal";
-
-function Knob() {
-  return (
-    <div className="relative w-24 h-24">
-      <div className="absolute inset-0 rounded-full bg-zinc-100 shadow-[inset_0_2px_6px_rgba(0,0,0,0.18),0_8px_16px_rgba(0,0,0,0.12)]"></div>
-
-      <div className="absolute inset-2 rounded-full border border-zinc-200"></div>
-
-      <div className="absolute inset-7 rounded-full bg-zinc-200 shadow-inner"></div>
-    </div>
-  );
-}
 
 export default function Home() {
   return (
@@ -21,7 +8,9 @@ export default function Home() {
       <div className="flex items-center mb-4 gap-4">
         <div className="hidden md:inline-flex items-center gap-3 border border-gray-200 bg-gray-200 rounded-sm px-3 py-1.5 text-sm text-zinc-800 font-mono">
           <span>&gt;_</span>
-          <span>Last updated June 2026</span>
+          <a href="./terminal" className="cursor-pointer">
+            <span>Last updated June 2026</span>
+          </a>
         </div>
         <div className="flex items-center gap-2 border border-gray-200 px-3 py-1.5 text-sm text-zinc-800">
           <span className="w-2 h-2 bg-alien" />

@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { Mail } from "lucide-react";
 import { twMerge } from "tailwind-merge";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { usePathname } from "next/navigation";
 
 type LinksModalProps = {
@@ -20,9 +20,15 @@ export default function LinksModal({
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
 
-  // Close modal when navigating between pages
+  const pathnameRef = useRef(pathname);
+
+  // Solution to lint warning
+
   useEffect(() => {
-    setOpen(false);
+    if (pathnameRef.current !== pathname) {
+      pathnameRef.current = pathname;
+      setOpen(false);
+    }
   }, [pathname]);
 
   return (
