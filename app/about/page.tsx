@@ -58,8 +58,8 @@ export default function About() {
             <p>
               Most of what I build comes from something that bugged me: a
               missing tool, a clunky workflow, a problem nobody had solved quite
-              right. That&apos;s how RollKeeper started - one too many browser tabs
-              open during an RPG session.
+              right. That&apos;s how RollKeeper started - one too many browser
+              tabs open during an RPG session.
             </p>
             <p>
               Outside personal projects I contribute to open source at CeSIUM
@@ -86,10 +86,10 @@ export default function About() {
                 </p>
               </div>
               <p className="text-gray-600 leading-relaxed max-w-2xl">
-                Contributing to open source web projects for UMinho&apos;s CS student
-                centre — the yearbook platform (Elixir/Phoenix), the Gallium
-                website, and the BugsByte Hackathon landing page. Real PRs, code
-                reviews, public repos.
+                Contributing to open source web projects for UMinho&apos;s CS
+                student centre — the yearbook platform (Elixir/Phoenix), the
+                Gallium website, and the BugsByte Hackathon landing page. Real
+                PRs, code reviews, public repos.
               </p>
             </div>
 

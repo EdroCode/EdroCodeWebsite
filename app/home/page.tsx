@@ -92,25 +92,34 @@ export default function Home() {
         <p className="text-sm text-gray-400 font-mono mb-6">recently_added</p>
         <ul className="space-y-5">
           <ProjectLink
-            href="https://github.com/EdroCode/EdroCodeWebsite"
-            title="Personal Website"
+            href="https://github.com/EdroCode/Celmata"
+            title="Celmata"
             award=""
-            tags={["NextJS", "TypeScript"]}
-            description="Simple personal website to share my projects and host content for my youtube."
+            tags={["C", "JavaScript"]}
+            description="Terminal-based ecosystem simulator written in C."
           />
+          <hr className="border-gray-300" />
+          <ProjectLink
+            href="https://github.com/edrocode/rollkeeper"
+            title="RollKeeper"
+            tags={["NextJS", "TypeScript"]}
+            description="A single-tab dashboard for TTRPG Dungeon Masters."
+          />
+          <hr className="border-gray-300" />
+          <ProjectLink
+            href="https://github.com/EdroCode/Moodium"
+            title="MoodiUM"
+            award=""
+            tags={["NextJS", "TypeScript", "Clerk", "Supabase"]}
+            description="Simple Personal mood journal."
+          />
+          <hr className="border-gray-300" />
           <ProjectLink
             href="https://github.com/TomasLFerreira/healthium"
             title="Healthium"
             award="BugsByte 2026 🥉"
             tags={["Vue 3", "FastAPI"]}
             description="A system for tracking health metrics with real-time backend sync."
-          />
-          <hr className="border-gray-300" />
-          <ProjectLink
-            href="https://github.com/edrocode/rollkeeper"
-            title="RollKeeper"
-            tags={["Elixir", "Phoenix Liveview"]}
-            description="A single-tab dashboard for TTRPG Dungeon Masters."
           />
           <hr className="border-gray-300" />
           <ProjectLink
