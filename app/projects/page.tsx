@@ -12,20 +12,20 @@ const webProjects = [
     href: "https://github.com/EdroCode",
   },
   {
-    title: "Moodium",
-    tags: ["Next.js", "Typescript"],
-    status: "In active development",
-    description:
-      "An web app that alows users to track habits, time, mood, goals and see insights of their life. ",
-    href: "https://github.com/EdroCode/rollkeeper",
-  },
-  {
     title: "RollKeeper",
-    tags: ["Elixir", "Phoenix LiveView"],
+    tags: ["NextJS", "Typescript"],
     status: "In active development",
     description:
       "A single-tab dashboard for TTRPG Dungeon Masters. Tracks initiative, HP, conditions, and notes in real time - no more juggling five browser tabs mid-session.",
     href: "https://github.com/EdroCode/rollkeeper",
+  },
+  {
+    title: "Moodium",
+    tags: ["Next.js", "Typescript"],
+    status: "Paused",
+    description:
+      "An web app that alows users to track habits, time, mood, goals and see insights of their life. ",
+    href: "https://github.com/EdroCode/moodium",
   },
   {
     title: "CeSIUM Yearbook",
@@ -33,6 +33,14 @@ const webProjects = [
     description:
       "Online yearbook platform for UMinho's CS student centre. Open source contribution with PRs and feature work on a production app used by hundreds of students.",
     href: "https://github.com/cesium/yearbook",
+  },
+  {
+    title: "Celmata",
+    tags: ["C", "Javascript"],
+    status: "In active development",
+    description:
+      "Terminal-based ecosystem simulator written in C, inspired by cellular automata and artificial life research.",
+    href: "https://github.com/EdroCode/Celmata",
   },
   {
     title: "HeroLab",
