@@ -1,6 +1,7 @@
 // app/projects/page.tsx
+"use client";
 import type { Metadata } from "next";
-export const metadata: Metadata = { title: "Projects" };
+import { useState } from "react";
 
 const webProjects = [
   {
@@ -56,6 +57,26 @@ const webProjects = [
       "Craft your own constellations, which act as dynamic skill trees. Draw a shape in the sky, get a build.",
     href: "https://github.com/EdroCode/StellarForge",
   },
+  {
+    title: "MineCeeper",
+    tags: ["C"],
+    description: "Minesweeper in the terminal, written in C out of boredom.",
+    href: "https://github.com/EdroCode/MineCeeper",
+  },
+  {
+    title: "CanSat",
+    tags: ["Python", "Raspberry Pi"],
+    description:
+      "Code and documentation for a high-altitude weather balloon equipped with a Raspberry Pi and environmental sensors.",
+    href: "https://github.com/EdroCode/CanSat",
+  },
+  {
+    title: "DUCKS-GAME",
+    tags: ["Haskell"],
+    description:
+      "University project for Laborat\u00f3rios de Inform\u00e1tica I, written in Haskell.",
+    href: "https://github.com/EdroCode/DUCKS-GAME",
+  },
 ];
 
 const gameProjects = [
@@ -88,6 +109,13 @@ const gameProjects = [
   },
 ];
 
+const allProjects = [
+  ...webProjects.map((p) => ({ ...p, category: "web_and_tools" })),
+  ...gameProjects.map((p) => ({ ...p, category: "games" })),
+];
+
+const allTags = Array.from(new Set(allProjects.flatMap((p) => p.tags))).sort();
+
 type Project = {
   title: string;
   award?: string;
@@ -95,6 +123,7 @@ type Project = {
   tags: string[];
   description: string;
   href: string;
+  category: string;
 };
 
 function ProjectCard({
@@ -146,6 +175,15 @@ function ProjectCard({
 }
 
 export default function Projects() {
+  const [activeTag, setActiveTag] = useState<string | null>(null);
+
+  const filtered = activeTag
+    ? allProjects.filter((p) => p.tags.includes(activeTag))
+    : allProjects;
+
+  const webFiltered = filtered.filter((p) => p.category === "web_and_tools");
+  const gameFiltered = filtered.filter((p) => p.category === "games");
+
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 py-20">
       <div className="mb-8">
@@ -160,27 +198,65 @@ export default function Projects() {
         <p className="text-lg text-zinc-500 font-mono">Work worth showing.</p>
       </div>
 
-      <hr className="border-gray-200 mb-10" />
+      <hr className="border-gray-200 mb-8" />
 
-      <div className="mb-16">
-        <p className="text-sm text-gray-400 font-mono mb-6">web_and_tools</p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {webProjects.map((p) => (
-            <ProjectCard key={p.title} {...p} />
-          ))}
-        </div>
+      <div className="flex gap-2 flex-wrap mb-10">
+        <button
+          onClick={() => setActiveTag(null)}
+          className={`text-xs font-mono px-3 py-1 rounded-sm border transition-colors cursor-pointer ${
+            activeTag === null
+              ? "border-gray-900 bg-gray-900 text-white"
+              : "border-gray-200 text-zinc-500 hover:border-gray-400"
+          }`}
+        >
+          all
+        </button>
+        {allTags.map((tag) => (
+          <button
+            key={tag}
+            onClick={() => setActiveTag(activeTag === tag ? null : tag)}
+            className={`text-xs font-mono px-3 py-1 rounded-sm border transition-colors cursor-pointer ${
+              activeTag === tag
+                ? "border-gray-900 bg-gray-900 text-white"
+                : "border-gray-200 text-zinc-500 hover:border-gray-400"
+            }`}
+          >
+            {tag}
+          </button>
+        ))}
       </div>
 
-      <hr className="border-gray-200 mb-10" />
-
-      <div className="mb-16">
-        <p className="text-sm text-gray-400 font-mono mb-6">games</p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {gameProjects.map((p) => (
-            <ProjectCard key={p.title} {...p} />
-          ))}
+      {webFiltered.length > 0 && (
+        <div className="mb-16">
+          <p className="text-sm text-gray-400 font-mono mb-6">web_and_tools</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {webFiltered.map((p) => (
+              <ProjectCard key={p.title} {...p} />
+            ))}
+          </div>
         </div>
-      </div>
+      )}
+
+      {webFiltered.length > 0 && gameFiltered.length > 0 && (
+        <hr className="border-gray-200 mb-10" />
+      )}
+
+      {gameFiltered.length > 0 && (
+        <div className="mb-16">
+          <p className="text-sm text-gray-400 font-mono mb-6">games</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {gameFiltered.map((p) => (
+              <ProjectCard key={p.title} {...p} />
+            ))}
+          </div>
+        </div>
+      )}
+
+      {filtered.length === 0 && (
+        <p className="text-sm text-gray-400 font-mono">
+          no projects match that filter.
+        </p>
+      )}
     </div>
   );
 }
