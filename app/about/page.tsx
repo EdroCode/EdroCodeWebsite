@@ -142,16 +142,23 @@ export default function About() {
             {[
               {
                 label: "Languages",
-                value: "Python, C, JS, Haskell, Elixir, GDScript",
+                value: "TypeScript, Python, C, JavaScript, Haskell, Elixir, GDScript",
               },
               {
-                label: "Web",
-                value: "Vue 3, Phoenix Liveview, CSS, Tailwind, HTML",
+                label: "Frontend",
+                value: "Vue 3, HTML, CSS, Tailwind CSS",
               },
-              { label: "Tools", value: "Git, Typst, Godot, FastAPI, Vite" },
+              {
+                label: "Backend",
+                value: "Phoenix LiveView, FastAPI, REST APIs",
+              },
+              {
+                label: "Tools",
+                value: "Git, Linux, Vite, Godot, Typst",
+              },
               {
                 label: "Other",
-                value: "Raspberry Pi, Linux, REST APIs, OpenAI",
+                value: "Raspberry Pi, OpenAI API",
               },
             ].map(({ label, value }) => (
               <div
