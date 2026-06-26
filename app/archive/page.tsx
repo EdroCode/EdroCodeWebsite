@@ -105,20 +105,18 @@ func _physics_process(delta):
 
 export default function Archive() {
   return (
-    <div className="max-w-7xl mx-auto px-4 md:px-2 py-20">
-      <div className="flex">
-        <h1 className="text-6xl font-zen-dots tracking-tight text-dojo mb-4">
-          |
-        </h1>
-        <h1 className="text-6xl font-zen-dots tracking-tight text-gray-900 mb-4">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 py-20">
+      <div className="flex items-baseline mb-4">
+        <h1 className="text-6xl font-zen-dots tracking-tight text-dojo">|</h1>
+        <h1 className="text-6xl font-zen-dots tracking-tight text-gray-900">
           Code Archive
         </h1>
       </div>
-      <p className="text-lg text-gray-500 leading-relaxed mb-12">
-        An archive for my YouTube tutorials.
+      <p className="text-lg text-gray-500 font-mono leading-relaxed mb-12">
+        Code from my YouTube tutorials.
       </p>
 
-      <hr className="border-gray-300 mb-10" />
+      <hr className="border-gray-200 mb-10" />
 
       <div>
         <p className="text-sm text-gray-400 font-mono mb-6">snippets</p>
@@ -126,16 +124,16 @@ export default function Archive() {
           <li className="space-y-4">
             <SnippetCard
               id="code-1"
-              title="2D Simple Ranged Attack"
-              description="A simple Godot Engine 2D player controller with movement, jumping, gravity, animations, and a knife-throw attack."
+              title="2D Simple Ranged Attack – Player"
+              description="Player controller with movement, jumping, gravity, animations, and a knife-throw attack."
               tags={["Godot", "GDScript"]}
               code={rangedAttackCode}
             />
             <SnippetCard
               id="code-2"
-              title="Knife Code"
-              description=""
-              tags={[]}
+              title="2D Simple Ranged Attack – Knife"
+              description="Knife projectile that travels horizontally based on the player's facing direction."
+              tags={["Godot", "GDScript"]}
               code={knifeCode}
             />
           </li>
@@ -143,7 +141,7 @@ export default function Archive() {
             <SnippetCard
               id="code-3"
               title="2D Simple Platformer Movement"
-              description="A simple Godot Engine 2D player controller handling movement, jumping, gravity, sprite flipping, and animations."
+              description="Player controller covering movement, jumping, gravity, sprite flipping, and animations."
               tags={["Godot", "GDScript"]}
               code={platformerCode}
             />

@@ -8,24 +8,24 @@ const webProjects = [
     award: "BugsByte 2026 🥉",
     tags: ["Vue 3", "FastAPI", "GPT-4o"],
     description:
-      "Full-stack AI nutrition platform built in 48 hours at BugsByte Hackathon. Users log meals, get real-time macro tracking, and receive AI-powered dietary suggestions. Shipped from zero to demo in a single weekend as a team of 4.",
-    href: "https://github.com/EdroCode",
+      "AI nutrition platform built in 48 hours at BugsByte. Users log meals, get macro tracking, and AI dietary suggestions. Team of 4, zero to demo in a weekend.",
+    href: "https://github.com/TomasLFerreira/healthium",
   },
   {
     title: "RollKeeper",
-    tags: ["NextJS", "Typescript"],
-    status: "In active development",
+    tags: ["Next.js", "TypeScript"],
+    status: "In development",
     description:
-      "A single-tab dashboard for TTRPG Dungeon Masters. Tracks initiative, HP, conditions, and notes in real time - no more juggling five browser tabs mid-session.",
-    href: "https://github.com/EdroCode/rollkeeper",
+      "All your RPG tools in one tab. Tracks initiative, HP, conditions, and notes so the DM can focus on the game instead of the browser.",
+    href: "https://github.com/EdroCode/RollKeeper",
   },
   {
-    title: "Moodium",
-    tags: ["Next.js", "Typescript"],
+    title: "moodiUM",
+    tags: ["Next.js", "TypeScript", "Supabase", "Clerk"],
     status: "Paused",
     description:
-      "An web app that alows users to track habits, time, mood, goals and see insights of their life. ",
-    href: "https://github.com/EdroCode/moodium",
+      "Personal mood journal. Log your mood, see the pattern, understand yourself. Dashboard, calendar view, streaks, and weekly summaries.",
+    href: "https://github.com/EdroCode/Moodium",
   },
   {
     title: "CeSIUM Yearbook",
@@ -36,24 +36,24 @@ const webProjects = [
   },
   {
     title: "Celmata",
-    tags: ["C", "Javascript"],
-    status: "In active development",
+    tags: ["C"],
+    status: "In development",
     description:
-      "Terminal-based ecosystem simulator written in C, inspired by cellular automata and artificial life research.",
+      "Terminal ecosystem simulator in C. Survival emerges from the rules.",
     href: "https://github.com/EdroCode/Celmata",
   },
   {
     title: "HeroLab",
     tags: ["Godot", "GDScript"],
     description:
-      "An interactive live RPG dashboard meant to be played live with viewers. The predecessor idea that evolved into RollKeeper.",
+      "Interactive RPG character manager with inventory, attributes, and live combat. The predecessor idea that grew into RollKeeper.",
     href: "https://github.com/EdroCode/HeroLab",
   },
   {
     title: "StellarForge",
     tags: ["Godot", "GDScript"],
     description:
-      " Craft you own constellations, which serve as dynamic skill trees.",
+      "Craft your own constellations, which act as dynamic skill trees. Draw a shape in the sky, get a build.",
     href: "https://github.com/EdroCode/StellarForge",
   },
 ];
@@ -147,9 +147,9 @@ function ProjectCard({
 
 export default function Projects() {
   return (
-    <div className="max-w-7xl mx-auto px-4 md:px-2 py-20">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 py-20">
       <div className="mb-8">
-        <div className="flex">
+        <div className="flex items-baseline">
           <h1 className="text-6xl font-zen-dots tracking-tight text-cesium mb-4">
             |
           </h1>
@@ -160,7 +160,7 @@ export default function Projects() {
         <p className="text-lg text-zinc-500 font-mono">Work worth showing.</p>
       </div>
 
-      <hr className="border-gray-300 mb-10" />
+      <hr className="border-gray-200 mb-10" />
 
       <div className="mb-16">
         <p className="text-sm text-gray-400 font-mono mb-6">web_and_tools</p>
@@ -171,7 +171,7 @@ export default function Projects() {
         </div>
       </div>
 
-      <hr className="border-gray-300 mb-10" />
+      <hr className="border-gray-200 mb-10" />
 
       <div className="mb-16">
         <p className="text-sm text-gray-400 font-mono mb-6">games</p>

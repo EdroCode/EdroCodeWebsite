@@ -1,10 +1,10 @@
-// app/page.tsx
+// app/home/page.tsx
 import Navcard from "@/components/Navcard";
 import ProjectLink from "@/components/ProjectLink";
 
 export default function Home() {
   return (
-    <div className="max-w-7xl mx-auto px-4 md:px-2 py-15">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 py-15">
       <div className="flex items-center mb-4 gap-4">
         <div className="hidden md:inline-flex items-center gap-3 border border-gray-200 bg-gray-200 rounded-sm px-3 py-1.5 text-sm text-zinc-800 font-mono">
           <span>&gt;_</span>
@@ -36,7 +36,7 @@ export default function Home() {
         </a>
       </p>
       <p className="text-lg text-gray-500 w-full leading-relaxed mb-10">
-        Computer Science student at UMinho.
+        Computer Engineering student at UMinho. I build tools I want to use.
       </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-12">
@@ -57,36 +57,36 @@ export default function Home() {
         />
       </div>
 
-      <hr className="border-gray-300 mb-10" />
+      <hr className="border-gray-200 mb-10" />
 
       <div className="mb-10">
         <p className="text-sm text-gray-400 font-mono mb-2">current_focus</p>
         <div className="flex flex-col gap-2">
           <p className="text-gray-800 leading-relaxed">
-            Building <span className="font-semibold text-dojo">moodiUM</span> -
-            a mood tracker for tracking habits, time, mood, and goals.
-          </p>
-          <p className="text-gray-800 leading-relaxed">
             Building <span className="font-semibold text-bugs">RollKeeper</span>{" "}
             - a single-tab dashboard for TTRPG Dungeon Masters.
           </p>
           <p className="text-gray-800 leading-relaxed">
+            Building <span className="font-semibold text-dojo">moodiUM</span> -
+            mood, habits, and goals in one place.
+          </p>
+          <p className="text-gray-800 leading-relaxed">
             Contributing to{" "}
             <span className="font-semibold text-cesium">Yearbook</span> - an
-            online yearbook platform built at{" "}
+            online yearbook platform at{" "}
             <a
               href="https://cesium.di.uminho.pt/en"
               target="_blank"
-              className="font-semibold text-ceium"
+              className="font-semibold text-cesium hover:underline"
             >
-              @CeSIUM
+              CeSIUM
             </a>
             .
           </p>
         </div>
       </div>
 
-      <hr className="border-gray-300 mb-10" />
+      <hr className="border-gray-200 mb-10" />
 
       <div>
         <p className="text-sm text-gray-400 font-mono mb-6">recently_added</p>
@@ -94,39 +94,37 @@ export default function Home() {
           <ProjectLink
             href="https://github.com/EdroCode/Celmata"
             title="Celmata"
-            award=""
             tags={["C", "JavaScript"]}
             description="Terminal-based ecosystem simulator written in C."
           />
-          <hr className="border-gray-300" />
+          <hr className="border-gray-200" />
           <ProjectLink
             href="https://github.com/edrocode/rollkeeper"
             title="RollKeeper"
             tags={["NextJS", "TypeScript"]}
-            description="A single-tab dashboard for TTRPG Dungeon Masters."
+            description="Single-tab dashboard for TTRPG Dungeon Masters."
           />
-          <hr className="border-gray-300" />
+          <hr className="border-gray-200" />
           <ProjectLink
             href="https://github.com/EdroCode/Moodium"
             title="MoodiUM"
-            award=""
             tags={["NextJS", "TypeScript", "Clerk", "Supabase"]}
-            description="Simple Personal mood journal."
+            description="Personal mood and habit journal."
           />
-          <hr className="border-gray-300" />
+          <hr className="border-gray-200" />
           <ProjectLink
             href="https://github.com/TomasLFerreira/healthium"
             title="Healthium"
             award="BugsByte 2026 🥉"
             tags={["Vue 3", "FastAPI"]}
-            description="A system for tracking health metrics with real-time backend sync."
+            description="AI nutrition platform built in 48 hours at BugsByte."
           />
-          <hr className="border-gray-300" />
+          <hr className="border-gray-200" />
           <ProjectLink
             href="https://github.com/cesium/yearbook"
             title="CeSIUM Yearbook"
             tags={["Elixir", "Phoenix Liveview"]}
-            description="An online yearbook website."
+            description="Online yearbook platform for UMinho's CS student centre."
           />
         </ul>
       </div>

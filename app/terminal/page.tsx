@@ -142,7 +142,7 @@ export default function TerminalPage() {
 
   return (
     <div
-      className="max-w-7xl mx-auto px-4 md:px-2 py-6 min-h-[60vh]"
+      className="max-w-7xl mx-auto px-4 md:px-4 py-6 min-h-[60vh]"
       onClick={() => inputRef.current?.focus()}
     >
       <div className="flex items-center mb-6 gap-3">

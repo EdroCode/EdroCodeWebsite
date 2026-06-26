@@ -1,7 +1,6 @@
 // app/tutorials/page.tsx
 import type { Metadata } from "next";
 import Image from "next/image";
-
 export const metadata: Metadata = { title: "Tutorials" };
 
 const videos = [
@@ -9,14 +8,14 @@ const videos = [
     id: "TLQzH5JQQlE",
     title: "2D Simple Ranged Attack – Godot",
     description:
-      "A simple Godot Engine 2D player controller with movement, jumping, gravity, animations, and a knife-throw attack.",
+      "Adds a knife-throw attack to a 2D player controller, with movement, jumping, gravity, and animations.",
     tags: ["Godot", "GDScript", "2D"],
   },
   {
     id: "mHYU_gJ1U6g",
     title: "2D Simple Platformer Movement – Godot",
     description:
-      "A simple Godot Engine 2D player controller handling movement, jumping, gravity, sprite flipping, and animations.",
+      "2D player controller covering movement, jumping, gravity, sprite flipping, and animations.",
     tags: ["Godot", "GDScript", "2D"],
   },
 ];
@@ -71,24 +70,22 @@ function VideoCard({
 
 export default function Tutorials() {
   return (
-    <div className="max-w-7xl mx-auto px-4 md:px-2 py-20">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 py-20">
       <div className="mb-12">
-        <div>
-          <div className="flex">
-            <h1 className="font-zen-dots text-6xl tracking-tight text-godot mb-4">
-              |
-            </h1>
-            <h1 className="font-zen-dots text-6xl tracking-tight text-gray-900 mb-4">
-              Tutorials
-            </h1>
-          </div>
+        <div className="flex items-baseline">
+          <h1 className="font-zen-dots text-6xl tracking-tight text-godot mb-4">
+            |
+          </h1>
+          <h1 className="font-zen-dots text-6xl tracking-tight text-gray-900 mb-4">
+            Tutorials
+          </h1>
         </div>
         <p className="text-lg text-zinc-500 font-mono">
           Step-by-step Godot guides.
         </p>
       </div>
 
-      <hr className="border-gray-300 mb-10" />
+      <hr className="border-gray-200 mb-10" />
 
       <div>
         <p className="text-sm text-gray-400 font-mono mb-6">videos</p>
