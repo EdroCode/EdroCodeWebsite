@@ -144,7 +144,7 @@ export default function About() {
               {
                 label: "Languages",
                 value:
-                  "TypeScript, Python, C, JavaScript, Haskell, Elixir, GDScript",
+                  "TypeScript, Python, C, C#, JavaScript, Haskell, Elixir, GDScript",
               },
               { label: "Frontend", value: "Vue 3, HTML, CSS, Tailwind CSS" },
               {
