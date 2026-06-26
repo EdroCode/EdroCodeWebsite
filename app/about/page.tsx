@@ -149,7 +149,7 @@ export default function About() {
               { label: "Frontend", value: "Vue 3, HTML, CSS, Tailwind CSS" },
               {
                 label: "Backend",
-                value: "Phoenix LiveView, FastAPI, REST APIs",
+                value: "Phoenix LiveView, FastAPI, REST APIs, SupaBase",
               },
               { label: "Tools", value: "Git, Linux, Vite, Godot, Typst" },
               { label: "Other", value: "Raspberry Pi, OpenAI API" },
