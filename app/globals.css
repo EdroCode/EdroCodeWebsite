@@ -6,6 +6,8 @@
   --font-zen-dots: "Zen Dots", sans-serif;
   --font-mono: "JetBrains Mono", monospace;
 
+  --bg-color: #ffffff;
+
   --color-cesium: #ee7749;
   --color-alien: #c8f135;
   --color-bugs: #7fbf1f;
@@ -15,7 +17,12 @@
 
 @layer base {
   body {
-    font-family: var(--font-mono);
+    margin: 0;
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    transition: background-image 0.3s ease;
   }
 }
 

@@ -1,5 +1,6 @@
 // components/Footer.js
 import LinksModal from "@/components/LinksModal";
+import BackgroundToggle from "./BackgroundToggle";
 
 export default function Footer() {
   return (
@@ -13,6 +14,7 @@ export default function Footer() {
         >
           Built with Next.js
         </a>
+        <BackgroundToggle />
         <div className="flex gap-3">
           <LinksModal />
         </div>
