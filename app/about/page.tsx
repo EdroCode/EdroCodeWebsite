@@ -2,6 +2,7 @@
 import type { Metadata } from "next";
 export const metadata: Metadata = { title: "About" };
 import { Download, ExternalLink } from "lucide-react";
+import Image from "next/image";
 
 export default function About() {
   return (
@@ -47,28 +48,45 @@ export default function About() {
         </p>
       </div>
 
-      <div className="space-y-12">
-        <div>
-          <p className="text-sm text-gray-400 font-mono mb-4">whoami</p>
-          <div className="space-y-3 text-gray-800 leading-relaxed">
-            <p>
-              Computer Engineering student at UMinho, based in Braga. I got into
-              programming the same way most people do - I wanted to make games,
-              and at some point making them became more interesting than playing
-              them.
-            </p>
-            <p>
-              Most of what I build comes from something that bugged me: a
-              missing tool, a clunky workflow, a problem nobody had solved quite
-              right. That&apos;s how RollKeeper started - one too many browser
-              tabs open during an RPG session.
-            </p>
-            <p>
-              Outside personal projects I contribute to open source at CeSIUM
-              and teach kids to code at CoderDojo Braga. I work best with a
-              balance of focused solo work and occasional discussion to clarify
-              ideas.
-            </p>
+      <div className="space-y-8">
+        <div className="flex flex-col sm:flex-row gap-6 sm:gap-10">
+          <div className="hidden lg:block sm:w-1/4 shrink-0">
+            <div className="h-full border border-gray-200 rounded-lg p-1 flex flex-col justify-between">
+              <div className="flex flex-col justify-center items-center mt-4 space-y-3 ">
+                <Image
+                  src="/me.jpg"
+                  alt="My picture"
+                  width={400}
+                  height={500}
+                  className="hidden lg:block w-64 h-auto rounded-md mx-auto"
+                />
+                <p>Braga, PT</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="sm:w-full md:border border-gray-200 rounded-lg md:p-6 ">
+            <p className="text-sm text-gray-400 font-mono mb-4">whoami</p>
+            <div className="space-y-3 text-gray-800 leading-relaxed">
+              <p>
+                Computer Engineering student at UMinho, based in Braga. I got
+                into programming the same way most people do - I wanted to make
+                games, and at some point making them became more interesting
+                than playing them.
+              </p>
+              <p>
+                Most of what I build comes from something that bugged me: a
+                missing tool, a clunky workflow, a problem nobody had solved
+                quite right. That&apos;s how RollKeeper started - one too many
+                browser tabs open during an RPG session.
+              </p>
+              <p>
+                Outside personal projects I contribute to open source at CeSIUM
+                and teach kids to code at CoderDojo Braga. I work best with a
+                balance of focused solo work and occasional discussion to
+                clarify ideas.
+              </p>
+            </div>
           </div>
         </div>
 
