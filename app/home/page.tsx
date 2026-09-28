@@ -1,4 +1,6 @@
 // app/home/page.tsx
+import Internships from "@/components/Home/Internships";
+import LastUpdated from "@/components/Home/LastUpdated";
 import Navcard from "@/components/Navcard";
 import ProjectLink from "@/components/ProjectLink";
 
@@ -6,19 +8,8 @@ export default function Home() {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 py-15">
       <div className="flex items-center mb-4 gap-4">
-        <div className="hidden md:inline-flex items-center gap-3 border border-gray-200 bg-gray-200 rounded-sm px-3 py-1.5 text-sm text-zinc-800 font-mono">
-          <span>&gt;_</span>
-          <a href="./terminal" className="cursor-pointer">
-            <span>Last updated August 2026</span>
-          </a>
-        </div>
-        <div className="flex items-center gap-2 border border-gray-200 px-3 py-1.5 text-sm text-zinc-800">
-          <span className="w-2 h-2 bg-alien" />
-          <span className="w-2 h-2 bg-dojo" />
-          <span className="w-2 h-2 bg-cesium" />
-          <span className="w-2 h-2 bg-bugs" />
-          <span className="font-normal">Open to internships · Summer 2026</span>
-        </div>
+        <LastUpdated />
+        <Internships />
       </div>
 
       <h1 className="font-zen-dots text-6xl tracking-tight text-gray-900 mb-5">
@@ -67,8 +58,8 @@ export default function Home() {
             - a single-tab dashboard for TTRPG Dungeon Masters.
           </p>
           <p className="text-gray-800 leading-relaxed">
-            Building <span className="font-semibold text-dojo">moodiUM</span> -
-            mood, habits, and goals in one place.
+            Building <span className="font-semibold text-blue-500">CVerus</span>{" "}
+            - a better CV Readme generator.
           </p>
           <p className="text-gray-800 leading-relaxed">
             Contributing to{" "}
@@ -82,6 +73,10 @@ export default function Home() {
               CeSIUM
             </a>
             .
+          </p>
+          <p className="text-gray-800 leading-relaxed">
+            Building <span className="font-semibold text-gray-500">Roomba</span>{" "}
+            - a random dungeon room generator.
           </p>
         </div>
       </div>
