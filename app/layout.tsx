@@ -4,6 +4,7 @@ import { Geist, Geist_Mono, Syne, Zen_Dots } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import PageTransition from "@/components/PageTransition";
 
 const syne = Syne({
   variable: "--font-syne",
@@ -47,7 +48,9 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col" suppressHydrationWarning>
         <Navbar />
-        <main className="flex-1">{children}</main>
+        <main className="flex-1">
+          <PageTransition>{children}</PageTransition>
+        </main>
         <Footer />
       </body>
     </html>
