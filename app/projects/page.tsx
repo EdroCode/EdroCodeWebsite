@@ -15,7 +15,7 @@ const webProjects = [
   {
     title: "RollKeeper",
     tags: ["Next.js", "TypeScript"],
-    status: "In development",
+    status: "Paused",
     description:
       "All your RPG tools in one tab. Tracks initiative, HP, conditions, and notes so the DM can focus on the game instead of the browser.",
     href: "https://github.com/EdroCode/RollKeeper",
@@ -23,7 +23,7 @@ const webProjects = [
   {
     title: "moodiUM",
     tags: ["Next.js", "TypeScript", "Supabase", "Clerk"],
-    status: "Paused",
+    status: "Cancelled",
     description:
       "Personal mood journal. Log your mood, see the pattern, understand yourself. Dashboard, calendar view, streaks, and weekly summaries.",
     href: "https://github.com/EdroCode/Moodium",
@@ -39,8 +39,7 @@ const webProjects = [
     title: "Celmata",
     tags: ["C"],
     status: "In development",
-    description:
-      "Terminal ecosystem simulator in C. Survival emerges from the rules.",
+    description: "Ecosystem simulator in C. Survival emerges from the rules.",
     href: "https://github.com/EdroCode/Celmata",
   },
   {
@@ -139,7 +138,7 @@ function ProjectCard({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="group flex flex-col border border-gray-200 rounded-sm p-6 hover:border-gray-500 hover:shadow-sm transition-all"
+      className="group flex flex-col hover:rotate-1 hover:scale-102 border border-gray-200 rounded-sm p-6 hover:border-gray-500 hover:shadow-sm transition-all"
     >
       <div className="flex items-start justify-between gap-4 mb-3">
         <div className="flex items-center gap-3 flex-wrap">
@@ -215,7 +214,7 @@ export default function Projects() {
           <button
             key={tag}
             onClick={() => setActiveTag(activeTag === tag ? null : tag)}
-            className={`text-xs font-mono px-3 py-1 rounded-sm border transition-colors cursor-pointer ${
+            className={`text-xs hover:rotate-1 hover:scale-108 font-mono px-3 py-1 rounded-sm border transition-all cursor-pointer ${
               activeTag === tag
                 ? "border-gray-900 bg-gray-900 text-white"
                 : "border-gray-200 text-zinc-500 hover:border-gray-400"

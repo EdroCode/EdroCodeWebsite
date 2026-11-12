@@ -84,7 +84,7 @@ export default function About() {
               <div className="flex flex-wrap justify-between gap-2 mb-2">
                 <p className="text-zinc-950 font-mono text-lg">
                   <span className="text-cesium">CeSIUM</span> – Open Source
-                  Collaborator
+                  Support Center Co-Director
                 </p>
                 <p className="text-gray-400 font-mono text-sm self-center">
                   Nov 2025 – Present

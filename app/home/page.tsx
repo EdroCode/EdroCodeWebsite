@@ -54,7 +54,11 @@ export default function Home() {
         <p className="text-sm text-gray-400 font-mono mb-2">current_focus</p>
         <div className="flex flex-col gap-2">
           <p className="text-gray-800 leading-relaxed">
-            Building <span className="font-semibold text-bugs">RollKeeper</span>{" "}
+            Building <span className="font-semibold text-bugs">Celmata</span> -
+            An ecosystem simulator in C.
+          </p>
+          <p className="text-gray-800 leading-relaxed">
+            Building <span className="font-semibold text-dojo">RollKeeper</span>{" "}
             - a single-tab dashboard for TTRPG Dungeon Masters.
           </p>
           <p className="text-gray-800 leading-relaxed">
@@ -62,9 +66,8 @@ export default function Home() {
             - a better CV Readme generator.
           </p>
           <p className="text-gray-800 leading-relaxed">
-            Contributing to{" "}
-            <span className="font-semibold text-cesium">Yearbook</span> - an
-            online yearbook platform at{" "}
+            Building <span className="font-semibold text-cesium">Yearbook</span>{" "}
+            - an online yearbook platform at{" "}
             <a
               href="https://cesium.di.uminho.pt/en"
               target="_blank"
@@ -90,7 +93,7 @@ export default function Home() {
             href="https://github.com/EdroCode/Celmata"
             title="Celmata"
             tags={["C", "JavaScript"]}
-            description="Terminal-based ecosystem simulator written in C."
+            description="Ecosystem simulator in C"
           />
           <hr className="border-gray-200" />
           <ProjectLink
